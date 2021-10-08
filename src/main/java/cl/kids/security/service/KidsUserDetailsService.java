@@ -1,4 +1,4 @@
-package cl.kids.entities.security;
+package cl.kids.security.service;
 
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;

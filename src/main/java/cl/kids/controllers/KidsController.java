@@ -29,5 +29,4 @@ public class KidsController {
         return new ResponseEntity<>(kidsBusiness.getKids(), HttpStatus.OK);
     }
 
-
 }

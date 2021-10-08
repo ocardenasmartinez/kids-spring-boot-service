@@ -1,4 +1,4 @@
-package cl.kids.entities.data.kids;
+package cl.kids.entities.data;
 
 import lombok.Builder;
 import lombok.Data;
@@ -12,12 +12,12 @@ import javax.persistence.*;
 @Data
 public class Kids {
 
-    public Kids(){
+    public Kids() {
 
     }
 
     public Kids(Integer id, String name, Integer age) {
-
+        this.id = id; this.name = name; this.age = age;
     }
 
     @Id

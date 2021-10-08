@@ -1,7 +1,7 @@
 package cl.kids.business;
 
 import cl.kids.data.repository.KidsRepository;
-import cl.kids.entities.data.kids.Kids;
+import cl.kids.entities.data.Kids;
 import cl.kids.entities.request.KidRequest;
 import cl.kids.entities.responses.KidResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,13 +12,15 @@ import java.util.List;
 
 public class KidsBusinessImpl implements KidsBusiness {
 
+    private static final String OK = "OK";
+
     @Autowired
     private KidsRepository kidsRepository;
 
     @Override
     public String saveKid(KidRequest kidRequest) {
         kidsRepository.save(Kids.builder().name(kidRequest.getName()).age(kidRequest.getAge()).build());
-        return "OK";
+        return OK;
     }
 
     @Override

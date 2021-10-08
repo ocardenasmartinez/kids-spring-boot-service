@@ -1,6 +1,6 @@
 package cl.kids.configurations;
 
-import cl.kids.entities.security.KidsUserDetailsService;
+import cl.kids.security.service.KidsUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
