@@ -4,6 +4,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Service;
 
 
 import java.util.Date;
@@ -11,6 +12,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
+@Service
 public class JwtUtils {
 
     public String SECRET_KET =  "secret";
@@ -38,7 +40,7 @@ public class JwtUtils {
 
     public String generateToken(UserDetails userDetails) {
         Map<String, Object> claims = new HashMap<>();
-        return null;
+        return createToken(claims, userDetails.getUsername());
     }
 
     private String createToken(Map<String, Object> claims, String subject) {
