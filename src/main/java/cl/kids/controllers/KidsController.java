@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class KidsController {
+public class KidsController extends ExceptionController {
 
     @Autowired
     private KidsBusiness kidsBusiness;
